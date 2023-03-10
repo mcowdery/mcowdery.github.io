@@ -1,0 +1,32 @@
+#name {
+	color: white;
+	text-align: center;
+	font-size: 2rem;
+	font-family: Manrope, sans-serif
+}
+
+#social a {
+	margin: .8rem;
+	/* font-size: xx-large */
+}
+
+#resume_email a {
+	margin: .8rem;
+}
+
+
+#github-link{
+	width: 20px;
+}
+#github-link-main{
+	width: 4vw;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+#myPic{
+	border-radius: 50%;
+	max-width: 200px;
+	width: 35vw;
+}

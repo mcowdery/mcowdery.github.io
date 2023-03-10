@@ -1,0 +1,31 @@
+#about_me_container{
+    display:flex;
+    justify-content: space-between;
+    /* background-color: blue; */
+    flex-direction: row;
+    width:100vw;
+    max-width:1200px;
+
+}
+#about_me_pic{
+    display:flex;
+    justify-content: space-between;
+   }
+#about_me_text{
+    display:flex;
+    align-items: center;
+    margin:20px;
+    text-align: left;
+}
+#myPic{
+	border-radius: 50%;
+	max-width: 300px;
+	width: 50vw;
+    margin:20px
+}
+
+/* main {
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+} */

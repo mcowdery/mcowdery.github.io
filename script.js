@@ -8,13 +8,13 @@ const filterInput = document.querySelector('.filter-repos');
 // get information from github profile
 const getProfile = async () => {
     const res = await fetch(
-        `https://api.github.com/users/${username}`
-        // {
-        //     headers: {
-        //         Accept: 'application/vnd.github+json',
-        //         Authorization: 'token your-personal-access-token-here'
-        //     }
-        // }
+        `https://api.github.com/users/${username}`,
+        {
+            headers: {
+                Accept: 'application/vnd.github+json',
+                Authorization: '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'
+            }
+        }
     );
     const profile = await res.json();
     displayProfile(profile);
@@ -22,26 +22,26 @@ const getProfile = async () => {
 getProfile();
 
 // display infomation from github profile
-const displayProfile = (profile) => {
-    const userInfo = document.querySelector('.user-info');
-    userInfo.innerHTML = `
-    <figure>
-        <img alt="user avatar" src=${profile.avatar_url} />
-    </figure>
-        <div>
-            <h2><a href=${profile.blog}><strong>${profile.name}</strong></a></h2>
-            <p>${profile.bio}</p>
-            <p>
-                <strong>Location:</strong> ${profile.location}
-            </p>
-            <p>
-                <strong>@${profile.login} </strong>
-                Repos: ${profile.public_repos}
-                Gists: ${profile.public_gists}
-            </p>
-        </div>
-    `;
-};
+// const displayProfile = (profile) => {
+//     const userInfo = document.querySelector('.user-info');
+//     userInfo.innerHTML = `
+//     <figure>
+//         <img alt="user avatar" src=${profile.avatar_url} />
+//     </figure>
+//         <div>
+//             <h2><a href=${profile.blog}><strong>${profile.name}</strong></a></h2>
+//             <p>${profile.bio}</p>
+//             <p>
+//                 <strong>Location:</strong> ${profile.location}
+//             </p>
+//             <p>
+//                 <strong>@${profile.login} </strong>
+//                 Repos: ${profile.public_repos}
+//                 Gists: ${profile.public_gists}
+//             </p>
+//         </div>
+//     `;
+// };
 
 // get list of user's public repos
 const getRepos = async () => {
