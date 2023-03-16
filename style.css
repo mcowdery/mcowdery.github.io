@@ -15,6 +15,7 @@
         --bg-main: #000;
         --bg-repo: #0f0f1a;
         --bg-user: #0a0a0f;
+        --accent2: #29bf4f;
     }
 }
 
@@ -175,9 +176,8 @@ h3 {
     width: 1fr;
     min-height: 180px;
     border-radius: 10px;
-    margin: 1em 0;
     border: 1px solid var(--accent);
-    padding: 1em;
+    padding: 2em;
     text-align: center;
     background-color: var(--bg-user);
 }
@@ -196,6 +196,14 @@ h3 {
 }
 
 .link-btn:hover {
+    background: var(--accent);
+    border: 2px solid var(--text);
+    transform: scale(1.1);
+}
+#live-btn{
+    background-color:#29bf4f
+}
+#live-btn:hover {
     background: var(--accent);
     border: 2px solid var(--text);
     transform: scale(1.1);

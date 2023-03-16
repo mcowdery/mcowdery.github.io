@@ -104,7 +104,16 @@ const displayRepos = (repos) => {
         if (repo.homepage && repo.homepage !== "") {
             listItem.innerHTML += `<br /> <br />
             <a class="link-btn" href=${repo.html_url}>Code ${devicons["Github"]}</a>
-            <a class="link-btn" href=${repo.homepage}>Live ${devicons["Chrome"]}</a> <br />`;
+            <a class="link-btn" id="live-btn" href=${repo.homepage}>Live ${devicons["Chrome"]}</a> <br />`;            
+        } 
+        else if (repo.name.includes("tic-tac-toe")) {
+            listItem.innerHTML += `<br /> <br />
+            <img src="./images/project-images/tic-tac-toe.png" style="width:100px; margin:20px;">
+            <br>
+            <br>
+            <br>
+            <a class="link-btn" href=${repo.html_url}>Code ${devicons["Github"]}</a>
+            <a class="link-btn" id="live-btn" href="http://mcowdery.github.io/${repo.name}">Live ${devicons["Chrome"]}</a> <br />`;     
         } else {
             listItem.innerHTML += `<br /> <br />
             <a class="link-btn" href=${repo.html_url}>View Project ${devicons["Github"]}</a><br />`;
