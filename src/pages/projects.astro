@@ -1,0 +1,24 @@
+﻿---
+import Base from '../layouts/Base.astro';
+import { projects } from '../data/site';
+---
+<Base title="Projects" description="Selected public projects by Mathew Cowdery.">
+  <div class="wrap page-head">
+    <p class="eyebrow">Selected work</p>
+    <h1>Projects</h1>
+    <p class="lead">Public work, described as it actually is. Each links to its repository.</p>
+  </div>
+  <div class="wrap" style="padding-bottom:72px">
+    <div class="grid cols-2">
+      {projects.map((p) => (
+        <article class="card">
+          <h3>{p.title}</h3>
+          <p>{p.summary}</p>
+          <ul>{p.details.map((d) => <li>{d}</li>)}</ul>
+          <ul class="tags">{p.stack.map((s) => <li>{s}</li>)}</ul>
+          <a class="more" href={p.repo}>View on GitHub →</a>
+        </article>
+      ))}
+    </div>
+  </div>
+</Base>

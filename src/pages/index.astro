@@ -1,0 +1,96 @@
+﻿---
+import Base from '../layouts/Base.astro';
+import { existsSync } from 'node:fs';
+import { site } from '../data/site';
+const hasHeadshot = existsSync('public/headshot.png');
+---
+<Base>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <p class="eyebrow">DevOps · DevSecOps · AI governance</p>
+        <h1>DevOps engineer, building toward <em>AI governance</em>.</h1>
+        <p class="lead">
+          I build and run containerized, CI/CD-driven systems in regulated environments, with a growing
+          focus on security, compliance, and the policy questions around AI.
+        </p>
+        <div class="actions">
+          <a class="button" href="/projects">See projects</a>
+          <a class="button secondary" href="/contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="portrait">
+        {hasHeadshot
+          ? <img class="headshot" src="/headshot.png" alt={`Portrait of ${site.name}`} width="220" height="220" />
+          : <div class="initials" aria-hidden="true">MC</div>}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">The path</p>
+      <h2>From pipelines to policy</h2>
+      <div class="grid cols-3" style="margin-top:24px">
+        <article class="card">
+          <span class="step">01 · Foundation</span>
+          <h3>DevOps</h3>
+          <p>
+            Containerization, CI/CD pipelines, and Python backend APIs. My recent work has been in a
+            regulated environment, where pipelines have to satisfy compliance requirements as well as ship software.
+          </p>
+        </article>
+        <article class="card">
+          <span class="step">02 · Growing</span>
+          <h3>Security &amp; compliance</h3>
+          <p>
+            The newer part of my work. I remediate container vulnerabilities with Trivy and have worked
+            alongside NIST 800-171 and ATO compliance efforts, as a contributor rather than an owner.
+          </p>
+        </article>
+        <article class="card">
+          <span class="step">03 · Direction</span>
+          <h3>AI governance &amp; policy</h3>
+          <p>
+            An MS in Management &amp; Policy (Translator track) at Purdue, graduating after Spring 2027,
+            and the AIGP certification in progress.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap grid cols-2">
+      <div>
+        <p class="eyebrow">How I work</p>
+        <h2>Shared definitions of done</h2>
+      </div>
+      <div>
+        <p>
+          I bring extensive Behavior-Driven Development experience: turning stakeholder expectations into
+          testable, shared definitions of done. That habit is why I'm drawn toward business analysis and
+          project coordination as my work grows.
+        </p>
+        <p>
+          I'm a U.S. Navy veteran. The regulated-industry experience carries over to SaaS, healthcare,
+          finance, and critical infrastructure.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="callout">
+        <p class="eyebrow">Research interest</p>
+        <h2>AI and under-catalogued historical sources</h2>
+        <p>
+          I'm interested in applying AI tooling to under-catalogued Austronesian and Philippine historical
+          sources, including manuscript digitization. It's an area where data sovereignty and research ethics
+          are concrete rather than abstract, which makes it a useful lens on AI governance.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

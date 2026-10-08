@@ -1,0 +1,47 @@
+﻿---
+import Base from '../layouts/Base.astro';
+import { site } from '../data/site';
+---
+<Base title="Experience" description="Professional experience of Mathew Cowdery.">
+  <div class="wrap page-head">
+    <p class="eyebrow">Background</p>
+    <h1>Experience</h1>
+    <p class="lead">My full, current work history lives on LinkedIn, so it's maintained in one place.</p>
+    <div class="actions"><a class="button" href={site.linkedin}>View experience on LinkedIn →</a></div>
+  </div>
+  <div class="wrap" style="padding-bottom:72px">
+    <ol class="timeline">
+      <li>
+        <article class="card">
+          <p class="meta">Current</p>
+          <h3>DevSecOps, BAE Systems</h3>
+          <p>
+            DevOps work in a regulated aerospace environment: containerized services, compliance-driven
+            CI/CD pipelines, and Python backend APIs. Expanding into the security side through container
+            vulnerability remediation (Trivy) and contributing to NIST 800-171 and ATO compliance efforts.
+          </p>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <p class="meta">In progress</p>
+          <h3>MS, Management &amp; Policy (Translator track)</h3>
+          <p>Purdue University, graduating after Spring 2027.</p>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <p class="meta">In progress</p>
+          <h3>AIGP, AI governance certification</h3>
+          <p>Working toward the credential as part of the move into AI governance and policy.</p>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <p class="meta">Service</p>
+          <h3>U.S. Navy veteran</h3>
+        </article>
+      </li>
+    </ol>
+  </div>
+</Base>
