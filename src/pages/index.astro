@@ -1,7 +1,7 @@
 ﻿---
 import Base from '../layouts/Base.astro';
 import { existsSync } from 'node:fs';
-import { site } from '../data/site';
+import { site, toolkit } from '../data/site';
 import Art from '../components/Art.astro';
 const hasHeadshot = existsSync('public/headshot.png');
 ---
@@ -12,10 +12,10 @@ const hasHeadshot = existsSync('public/headshot.png');
     <div class="wrap hero-inner">
       <div>
         <p class="eyebrow">DevOps · DevSecOps · AI governance</p>
-        <h1>DevOps engineer, building toward <em>AI governance</em>.</h1>
+        <h1>DevOps engineer building toward <em>AI governance</em>.</h1>
         <p class="lead">
           I build and run containerized, CI/CD-driven systems in regulated environments, with a growing
-          focus on security, compliance, and the policy questions around AI.
+          focus on security, compliance, and how AI systems should be governed.
         </p>
         <div class="actions">
           <a class="button" href="/projects">See projects</a>
@@ -40,8 +40,9 @@ const hasHeadshot = existsSync('public/headshot.png');
           <span class="step">01 · Foundation</span>
           <h3>DevOps</h3>
           <p>
-            Containerization, CI/CD pipelines, and Python backend APIs. My recent work has been in a
-            regulated environment, where pipelines have to satisfy compliance requirements as well as ship software.
+            Containerization, CI/CD pipelines, and Python backend APIs, built in a regulated aerospace
+            environment where pipelines have to satisfy compliance requirements as well as ship software.
+            That discipline transfers directly to SaaS, healthcare, finance, and critical infrastructure.
           </p>
         </article>
         <article class="card">
@@ -49,8 +50,9 @@ const hasHeadshot = existsSync('public/headshot.png');
           <span class="step">02 · Growing</span>
           <h3>Security &amp; compliance</h3>
           <p>
-            The newer part of my work. I remediate container vulnerabilities with Trivy and have worked
-            alongside NIST 800-171 and ATO compliance efforts, as a contributor rather than an owner.
+            The newer part of my work: remediating container vulnerabilities with Trivy and contributing
+            to NIST 800-171 and authorization-to-operate (ATO) compliance efforts. I'm building depth here
+            deliberately; it's the bridge between the engineering I know and the governance work I'm heading toward.
           </p>
         </article>
         <article class="card">
@@ -58,8 +60,10 @@ const hasHeadshot = existsSync('public/headshot.png');
           <span class="step">03 · Direction</span>
           <h3>AI governance &amp; policy</h3>
           <p>
-            An MS in Management &amp; Policy (Translator track) at Purdue, graduating after Spring 2027,
-            and the AIGP certification in progress.
+            An MS in Management &amp; Policy (Translator track) at Purdue University, graduating after
+            Spring 2027, and the AIGP certification in progress. The goal: roles where someone who knows
+            how systems are actually built and deployed helps translate between engineering teams and
+            policy requirements.
           </p>
         </article>
       </div>
@@ -67,21 +71,35 @@ const hasHeadshot = existsSync('public/headshot.png');
   </section>
 
   <section class="section">
+    <div class="wrap">
+      <p class="eyebrow">Toolkit</p>
+      <h2>What I work with</h2>
+      <dl class="toolkit">
+        {toolkit.map((t) => (
+          <div class="row">
+            <dt>{t.group}</dt>
+            <dd><ul class="tags">{t.items.map((i) => <li>{i}</li>)}</ul></dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <section class="section">
     <div class="wrap grid cols-2">
       <div>
         <p class="eyebrow">How I work</p>
-        <h2>Shared definitions of done</h2>
+        <h2>Translating between people and systems</h2>
       </div>
       <div>
         <p>
-          I bring extensive Behavior-Driven Development experience: turning stakeholder expectations into
-          testable, shared definitions of done. That habit is why I'm drawn toward business analysis and
-          project coordination as my work grows.
+          Much of my experience is in Behavior-Driven Development: working with stakeholders to turn
+          expectations into testable, shared definitions of done before anything is built. It's the same
+          skill a translator role needs, whether the gap is between product and engineering or between
+          policy and implementation, and it's why I'm drawn toward business analysis and governance work
+          alongside engineering.
         </p>
-        <p>
-          I'm a U.S. Navy veteran. The regulated-industry experience carries over to SaaS, healthcare,
-          finance, and critical infrastructure.
-        </p>
+        <p>I'm a U.S. Navy veteran.</p>
       </div>
     </div>
   </section>
@@ -95,8 +113,8 @@ const hasHeadshot = existsSync('public/headshot.png');
         <h2>AI and under-catalogued historical sources</h2>
         <p>
           I'm interested in applying AI tooling to under-catalogued Austronesian and Philippine historical
-          sources, including manuscript digitization. It's an area where data sovereignty and research ethics
-          are concrete rather than abstract, which makes it a useful lens on AI governance.
+          sources, including manuscript digitization. Questions of data sovereignty and research ethics are
+          concrete there rather than abstract, which makes it a useful lens on AI governance.
         </p>
       </div>
     </div>

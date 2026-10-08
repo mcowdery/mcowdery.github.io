@@ -159,5 +159,12 @@ const nav = [
   .foot a { color: var(--muted); text-decoration: none; }
   .foot a:hover { color: var(--accent); }
   @media (max-width: 799px) { .hero-shade { background: linear-gradient(180deg, rgba(5,5,5,.82), rgba(5,5,5,.94)); } .callout-shade { background: rgba(14,14,14,.9); } }
+  .toolkit { margin: 24px 0 0; border-top: 1px solid var(--line); }
+  .toolkit .row { display: grid; gap: 8px 24px; padding: 16px 0; border-bottom: 1px solid var(--line); align-items: center; }
+  @media (min-width: 700px) { .toolkit .row { grid-template-columns: 160px 1fr; } }
+  .toolkit dt { font: 500 .78rem var(--mono); text-transform: uppercase; letter-spacing: .1em; color: var(--accent-2); }
+  .toolkit dd { margin: 0; }
+  .toolkit .tags { margin: 0 !important; }
+  .toolkit .tags li { font-size: .85rem; padding: 4px 12px; color: var(--fg) !important; background: var(--surface); }
   @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
 </style>

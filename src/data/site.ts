@@ -7,6 +7,14 @@
   email: 'mcowdery@gmail.com',
 };
 
+export const toolkit: { group: string; items: string[] }[] = [
+  { group: 'Containers', items: ['Docker', 'Kubernetes'] },
+  { group: 'CI/CD', items: ['GitHub Actions', 'GitLab CI'] },
+  { group: 'Backend', items: ['Python', 'FastAPI'] },
+  { group: 'Security', items: ['Trivy', 'NIST 800-171 (exposure)'] },
+  { group: 'Practice', items: ['Behavior-Driven Development'] },
+];
+
 export interface Project {
   title: string;
   summary: string;
@@ -24,10 +32,10 @@ export const projects: Project[] = [
     details: [
       'Detectors for Kerberoasting, AS-REP roasting, password guessing and spraying, and LDAP reconnaissance, each a tunable sliding-window heuristic.',
       'Exits non-zero on high-severity findings so it can run in a CI pipeline or scheduled job.',
-      'A learning project: sample traffic is synthetically generated with scapy rather than captured from a real domain, and the README says so plainly.',
+      'Built as a learning project in Active Directory internals and network-based detection; sample traffic is generated synthetically with scapy rather than captured from a live domain.',
     ],
     stack: ['Python', 'scapy', 'Security detection'],
-    repo: 'https://github.com/mcowdery/it-test-proj',
+    repo: 'https://github.com/mcowdery/ad-traffic-analyzer',
     art: 'ad',
   },
   {
@@ -61,7 +69,7 @@ export const projects: Project[] = [
     details: [
       'An installer that is idempotent, keeps existing hooks, and supports a dry run and uninstall.',
       'Defaults to blocking only on confident upgrades; downgrades are advisory unless you opt in.',
-      'Needs an API key for a third-party classifier service that is currently early access.',
+      'Depends on a third-party classifier API that is currently in early access.',
     ],
     stack: ['Node.js', 'Claude Code hooks', 'Automation'],
     repo: 'https://github.com/mcowdery/claude-model-guard',
