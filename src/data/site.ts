@@ -13,6 +13,7 @@ export interface Project {
   details: string[];
   stack: string[];
   repo: string;
+  art: string;
 }
 
 export const projects: Project[] = [
@@ -27,6 +28,7 @@ export const projects: Project[] = [
     ],
     stack: ['Python', 'scapy', 'Security detection'],
     repo: 'https://github.com/mcowdery/it-test-proj',
+    art: 'ad',
   },
   {
     title: 'Wood Seasoning Tracker',
@@ -38,6 +40,7 @@ export const projects: Project[] = [
     ],
     stack: ['React', 'Vite', 'JavaScript'],
     repo: 'https://github.com/mcowdery/wood-seasoning-tracker',
+    art: 'wood',
   },
   {
     title: 'agent-concurrency-kit',
@@ -49,6 +52,7 @@ export const projects: Project[] = [
     ],
     stack: ['Node.js', 'Git worktrees', 'CLI tooling'],
     repo: 'https://github.com/mcowdery/agent-concurrency-kit',
+    art: 'agent',
   },
   {
     title: 'claude-model-guard',
@@ -61,5 +65,6 @@ export const projects: Project[] = [
     ],
     stack: ['Node.js', 'Claude Code hooks', 'Automation'],
     repo: 'https://github.com/mcowdery/claude-model-guard',
+    art: 'guard',
   },
 ];

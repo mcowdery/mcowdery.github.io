@@ -11,12 +11,15 @@ import { projects } from '../data/site';
   <div class="wrap" style="padding-bottom:72px">
     <div class="grid cols-2">
       {projects.map((p) => (
-        <article class="card">
-          <h3>{p.title}</h3>
-          <p>{p.summary}</p>
-          <ul>{p.details.map((d) => <li>{d}</li>)}</ul>
-          <ul class="tags">{p.stack.map((s) => <li>{s}</li>)}</ul>
-          <a class="more" href={p.repo}>View on GitHub →</a>
+        <article class="card has-cover">
+          <div class="cover-frame"><img class="cover" src={`/photos/${p.art}.jpg`} alt="" width="1536" height="640" loading="lazy" /></div>
+          <div class="body">
+            <h3>{p.title}</h3>
+            <p>{p.summary}</p>
+            <ul>{p.details.map((d) => <li>{d}</li>)}</ul>
+            <ul class="tags">{p.stack.map((s) => <li>{s}</li>)}</ul>
+            <a class="more" href={p.repo}>View on GitHub →</a>
+          </div>
         </article>
       ))}
     </div>

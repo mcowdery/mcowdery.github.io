@@ -2,10 +2,13 @@
 import Base from '../layouts/Base.astro';
 import { existsSync } from 'node:fs';
 import { site } from '../data/site';
+import Art from '../components/Art.astro';
 const hasHeadshot = existsSync('public/headshot.png');
 ---
 <Base>
   <section class="hero">
+    <img class="hero-photo" src="/photos/hero.jpg" alt="" width="1792" height="768" fetchpriority="high" />
+    <div class="hero-shade"></div>
     <div class="wrap hero-inner">
       <div>
         <p class="eyebrow">DevOps · DevSecOps · AI governance</p>
@@ -33,6 +36,7 @@ const hasHeadshot = existsSync('public/headshot.png');
       <h2>From pipelines to policy</h2>
       <div class="grid cols-3" style="margin-top:24px">
         <article class="card">
+          <Art kind="devops" class="icon" />
           <span class="step">01 · Foundation</span>
           <h3>DevOps</h3>
           <p>
@@ -41,6 +45,7 @@ const hasHeadshot = existsSync('public/headshot.png');
           </p>
         </article>
         <article class="card">
+          <Art kind="security" class="icon" />
           <span class="step">02 · Growing</span>
           <h3>Security &amp; compliance</h3>
           <p>
@@ -49,6 +54,7 @@ const hasHeadshot = existsSync('public/headshot.png');
           </p>
         </article>
         <article class="card">
+          <Art kind="governance" class="icon" />
           <span class="step">03 · Direction</span>
           <h3>AI governance &amp; policy</h3>
           <p>
@@ -83,6 +89,8 @@ const hasHeadshot = existsSync('public/headshot.png');
   <section class="section">
     <div class="wrap">
       <div class="callout">
+        <img class="callout-photo" src="/photos/research.jpg" alt="" width="1536" height="640" loading="lazy" />
+        <div class="callout-shade"></div>
         <p class="eyebrow">Research interest</p>
         <h2>AI and under-catalogued historical sources</h2>
         <p>

@@ -3,12 +3,16 @@ import Base from '../layouts/Base.astro';
 import { site } from '../data/site';
 ---
 <Base title="Contact" description="Contact Mathew Cowdery.">
-  <div class="wrap page-head">
-    <p class="eyebrow">Say hello</p>
-    <h1>Contact</h1>
-    <p class="lead">I'm interested in DevOps, DevSecOps, and AI governance and policy roles. Email is the best way to reach me.</p>
+  <div class="banner">
+    <img class="banner-photo" src="/photos/contact.jpg" alt="" width="1792" height="640" fetchpriority="high" />
+    <div class="banner-shade"></div>
+    <div class="wrap page-head">
+      <p class="eyebrow">Say hello</p>
+      <h1>Contact</h1>
+      <p class="lead">I'm interested in DevOps, DevSecOps, and AI governance and policy roles. Email is the best way to reach me.</p>
+    </div>
   </div>
-  <div class="wrap" style="padding-bottom:72px">
+  <div class="wrap" style="padding-block:48px 72px">
     <div class="grid cols-3">
       <a class="card contact-card" href={`mailto:${site.email}`}>
         <span class="label">Email</span><span class="value">{site.email}</span><p class="hint">Best for first contact</p>
