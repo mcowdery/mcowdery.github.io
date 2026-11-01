@@ -59,7 +59,7 @@ export const projects: Project[] = [
       'Stale locks clear themselves when the holding process dies, and waits time out instead of hanging.',
     ],
     stack: ['Node.js', 'Git worktrees', 'CLI tooling'],
-    repo: 'https://github.com/mcowdery/agent-concurrency-kit',
+    repo: 'https://github.com/mcowdery/ai-tools/tree/master/tools/concurrency',
     art: 'agent',
   },
   {
@@ -72,7 +72,7 @@ export const projects: Project[] = [
       'Depends on a third-party classifier API that is currently in early access.',
     ],
     stack: ['Node.js', 'Claude Code hooks', 'Automation'],
-    repo: 'https://github.com/mcowdery/claude-model-guard',
+    repo: 'https://github.com/mcowdery/ai-tools/tree/master/tools/model-guard',
     art: 'guard',
   },
 ];
